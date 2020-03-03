@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">D:\apache-jmeter-3.3\lib\ext\json-20180813.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="gateway同步清结算接口" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1557466855000</longProp>
+        <longProp name="ThreadGroup.end_time">1557466855000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-type" elementType="Header">
+              <stringProp name="Header.name">Content-type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </LoopController>
+        <hashTree>
+          <SyncTimer guiclass="TestBeanGUI" testclass="SyncTimer" testname="Synchronizing Timer" enabled="false">
+            <intProp name="groupSize">1</intProp>
+            <longProp name="timeoutInMs">0</longProp>
+          </SyncTimer>
+          <hashTree/>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="计数器" enabled="true">
+            <stringProp name="CounterConfig.start">${__time(,)}</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">idTxn</stringProp>
+            <stringProp name="CounterConfig.format"></stringProp>
+            <boolProp name="CounterConfig.per_user">false</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Realtimesettle" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;mcc&quot;: &quot;4511&quot;,&#xd;
+	&quot;quickRfdFlag&quot;: &quot;0&quot;,&#xd;
+	&quot;riskStatus&quot;: &quot;P&quot;,&#xd;
+	&quot;stlFlg&quot;: &quot;0&quot;,&#xd;
+	&quot;authRespCode&quot;: &quot;00&quot;,&#xd;
+	&quot;expDate&quot;: &quot;2403&quot;,&#xd;
+	&quot;appSrc&quot;: &quot;CPS&quot;,&#xd;
+	&quot;forCardOrg&quot;: &quot;MC&quot;,&#xd;
+	&quot;terminalId&quot;: &quot;${__BeanShell(vars.get(&quot;terminalld_${Ement}&quot;))}&quot;,&#xd;
+	&quot;reconDate&quot;: 1557418600000,&#xd;
+	&quot;cardName&quot;: &quot;招商银行信用卡&quot;,&#xd;
+	&quot;extTraceNo&quot;: &quot;05432004821849520190510134309165&quot;,&#xd;
+	&quot;stlMemberCode&quot;: &quot;${__BeanShell(vars.get(&quot;stlMemberCode_${Ement}&quot;))}&quot;,&#xd;
+	&quot;riskLv&quot;: 0,&#xd;
+	&quot;merchantId&quot;: &quot;${__BeanShell(vars.get(&quot;merchantId_${Ement}&quot;))}&quot;,&#xd;
+	&quot;appType&quot;: &quot;REAL_TIME_SETTLE&quot;,&#xd;
+	&quot;memberCode&quot;: &quot;${__BeanShell(vars.get(&quot;memberCode_${Ement}&quot;))}&quot;,&#xd;
+	&quot;termTxnTime&quot;: 1557467027000,&#xd;
+	&quot;authTime&quot;: 1557467028000,&#xd;
+	&quot;cardType&quot;: &quot;0001&quot;,&#xd;
+	&quot;srvChanType&quot;: &quot;Y&quot;,&#xd;
+	&quot;issuerId&quot;: &quot;04105840&quot;,&#xd;
+	&quot;amt&quot;: ${amt},&#xd;
+	&quot;hasChannelDisc&quot;: &quot;1&quot;,&#xd;
+	&quot;riskResult&quot;: &quot;M1001&quot;,&#xd;
+	&quot;authNetId&quot;: &quot;00010001&quot;,&#xd;
+	&quot;bizType&quot;: &quot;S0&quot;,&#xd;
+	&quot;authTraceNo&quot;: &quot;224306&quot;,&#xd;
+	&quot;postingFlg&quot;: &quot;0&quot;,&#xd;
+	&quot;authMerchantId&quot;: &quot;${__BeanShell(vars.get(&quot;authMerchantId_${Ement}&quot;))}&quot;,&#xd;
+	&quot;txnTime&quot;: ${__time(,)},&#xd;
+	&quot;cardOrg&quot;: &quot;CU&quot;,&#xd;
+	&quot;terminalName&quot;: &quot;令领百货&quot;,&#xd;
+	&quot;srvChanSrc&quot;: &quot;S&quot;,&#xd;
+	&quot;authCode&quot;: &quot;366026&quot;,&#xd;
+	&quot;sPan&quot;: &quot;5268557011&quot;,&#xd;
+	&quot;authBatchNo&quot;: &quot;000001&quot;,&#xd;
+	&quot;termInvoiceNo&quot;: &quot;000005&quot;,&#xd;
+	&quot;txnFlg&quot;: &quot;S&quot;,&#xd;
+	&quot;idTxn&quot;: &quot;${idTxn}&quot;,&#xd;
+	&quot;orginIdTxn&quot;:&quot;${orginIdTxn}&quot;,&#xd;
+	&quot;srvEntryMode&quot;: &quot;021&quot;,&#xd;
+	&quot;cnpFlg&quot;: &quot;0&quot;,&#xd;
+	&quot;idTxnCtrl&quot;: &quot;301906131037&quot;,&#xd;
+	&quot;termTraceNo&quot;: &quot;000003&quot;,&#xd;
+	&quot;onUs&quot;: &quot;0&quot;,&#xd;
+	&quot;txnType&quot;: &quot;${txnType}&quot;,&#xd;
+	&quot;valueDate&quot;: 1557676800000,&#xd;
+	&quot;entryCvv2Flg&quot;: &quot;0&quot;,&#xd;
+	&quot;txnStatus&quot;: &quot;PC&quot;,&#xd;
+	&quot;termReconFlg&quot;: &quot;W&quot;,&#xd;
+	&quot;acquirerId&quot;: &quot;00010000&quot;,&#xd;
+	&quot;authReconFlg&quot;: &quot;W&quot;,&#xd;
+	&quot;authTerminalId&quot;: &quot;26663061&quot;,&#xd;
+	&quot;authRef&quot;: &quot;125568453901&quot;,&#xd;
+	&quot;stlMerchantId&quot;: &quot;${__BeanShell(vars.get(&quot;stlMerchantId_${Ement}&quot;))}&quot;,&#xd;
+	&quot;authInvoiceNo&quot;: &quot;131212&quot;,&#xd;
+	&quot;cur&quot;: &quot;CNY&quot;,&#xd;
+	&quot;srvConCode&quot;: &quot;00&quot;,&#xd;
+	&quot;stlBizFlg&quot;: &quot;0&quot;,&#xd;
+	&quot;tunnelData&quot; : 		&quot;{\&quot;fststlFlg\&quot;:\&quot;0\&quot;,\&quot;instlFlg\&quot;:\&quot;0\&quot;,\&quot;merchantId\&quot;:\&quot;812321042140008\&quot;,\&quot;terminalId\&quot;:\&quot;00000000\&quot;,\&quot;appChannelType\&quot;:\&quot;S_PROJECT\&quot;,\&quot;merchantName\&quot;:\&quot;南京市浦口区万胜汽车运输有限公司\&quot;,\&quot;merchantMcc\&quot;:\&quot;4214\&quot;,\&quot;areaCode\&quot;:\&quot;320100\&quot;,\&quot;schannelFlg\&quot;:\&quot;1\&quot;,\&quot;merchantCode\&quot;:\&quot;10012311729\&quot;,\&quot;deviceId\&quot;:\&quot;EED4F924-F6AC-4085-9A65-553267C9105E\&quot;,\&quot;machineSN\&quot;:\&quot;LD89374405\&quot;,\&quot;xCountry\&quot;:\&quot;中国\&quot;,\&quot;xProvince\&quot;:\&quot;江苏省\&quot;,\&quot;xCity\&quot;:\&quot;南京市\&quot;,\&quot;x_app_notify_merchant\&quot;:\&quot;999310089990028\&quot;,\&quot;bgw.specialflow\&quot;:{\&quot;terminalId\&quot;:\&quot;26260403\&quot;,\&quot;merchantMcc\&quot;:\&quot;5611\&quot;,\&quot;areaCode\&quot;:\&quot;320100\&quot;,\&quot;merchantName\&quot;:\&quot;南京王朝服饰发展有限公司\&quot;,\&quot;appChannelType\&quot;:\&quot;S_PROJECT\&quot;,\&quot;merchantId\&quot;:\&quot;812320056110147\&quot;}}&quot;&#xd;
+&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${__BeanShell(vars.get(&quot;IP_${Ement}&quot;))}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/mcs-gateway/mcs/settle/realtime</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="Ement" elementType="Argument">
+                  <stringProp name="Argument.name">Ement</stringProp>
+                  <stringProp name="Argument.value">st2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <stringProp name="Argument.desc">dev/st2</stringProp>
+                </elementProp>
+                <elementProp name="IP_dev" elementType="Argument">
+                  <stringProp name="Argument.name">IP_dev</stringProp>
+                  <stringProp name="Argument.value">192.168.47.130</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="IP_st2" elementType="Argument">
+                  <stringProp name="Argument.name">IP_st2</stringProp>
+                  <stringProp name="Argument.value">192.168.8.70</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="terminalId_dev" elementType="Argument">
+                  <stringProp name="Argument.name">terminalId_dev</stringProp>
+                  <stringProp name="Argument.value">20170713</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="terminalId_st2" elementType="Argument">
+                  <stringProp name="Argument.name">terminalId_st2</stringProp>
+                  <stringProp name="Argument.value">70040162</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <stringProp name="Argument.desc">70043655</stringProp>
+                </elementProp>
+                <elementProp name="stlMemberCode_dev" elementType="Argument">
+                  <stringProp name="Argument.name">stlMemberCode_dev</stringProp>
+                  <stringProp name="Argument.value">10011637747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="stlMemberCode_st2" elementType="Argument">
+                  <stringProp name="Argument.name">stlMemberCode_st2</stringProp>
+                  <stringProp name="Argument.value">10011537062</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="merchantId_dev" elementType="Argument">
+                  <stringProp name="Argument.name">merchantId_dev</stringProp>
+                  <stringProp name="Argument.value">812324545110001</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="merchantId_st2" elementType="Argument">
+                  <stringProp name="Argument.name">merchantId_st2</stringProp>
+                  <stringProp name="Argument.value">812320070110307</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <stringProp name="Argument.desc">812320070120090,812320015200019</stringProp>
+                </elementProp>
+                <elementProp name="memberCode_dev" elementType="Argument">
+                  <stringProp name="Argument.name">memberCode_dev</stringProp>
+                  <stringProp name="Argument.value">10011637747</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="memberCode_st2" elementType="Argument">
+                  <stringProp name="Argument.name">memberCode_st2</stringProp>
+                  <stringProp name="Argument.value">10011537062</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="amt" elementType="Argument">
+                  <stringProp name="Argument.name">amt</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <stringProp name="Argument.desc">999.99</stringProp>
+                </elementProp>
+                <elementProp name="authMerchantId_dev" elementType="Argument">
+                  <stringProp name="Argument.name">authMerchantId_dev</stringProp>
+                  <stringProp name="Argument.value">812324545110001</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="authMerchantId_st2" elementType="Argument">
+                  <stringProp name="Argument.name">authMerchantId_st2</stringProp>
+                  <stringProp name="Argument.value">812320070110307</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="stlMerchantId_dev" elementType="Argument">
+                  <stringProp name="Argument.name">stlMerchantId_dev</stringProp>
+                  <stringProp name="Argument.value">812324545110001</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="stlMerchantId_st2" elementType="Argument">
+                  <stringProp name="Argument.name">stlMerchantId_st2</stringProp>
+                  <stringProp name="Argument.value">812320070110307</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <stringProp name="Argument.desc">812320070120090</stringProp>
+                </elementProp>
+                <elementProp name="txnType" elementType="Argument">
+                  <stringProp name="Argument.name">txnType</stringProp>
+                  <stringProp name="Argument.value">00200</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="orginIdTxn" elementType="Argument">
+                  <stringProp name="Argument.name">orginIdTxn</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.desc">退货使用</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="authNetId" elementType="Argument">
+                  <stringProp name="Argument.name">authNetId</stringProp>
+                  <stringProp name="Argument.value">00010001</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-233666441">&quot;respCode&quot;:&quot;R200&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取交易编号" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">idTxn</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;idTxn&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">error</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取响应response" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">respCode</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;respCode&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">error</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">import net.bill99.*;//外部引用架包放在dependencies\lib目录，在配置文件添加架包存放地址
+log.info(&quot;调用外部jar包...&quot;);
+String resonseData = prev.getResponseDataAsString();
+props.put(&quot;resonseData&quot;,resonseData);
+log.info(&quot;返回报文：&quot;+resonseData);
+if(new StringContains().findString(&quot;R200&quot;,resonseData)){
+	log.info(&quot;外部架包调用成功&quot;);
+}else{
+	log.info(&quot;外部架包调用失败&quot;);
+}
+</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell断言" enabled="true">
+              <stringProp name="BeanShellAssertion.query">import org.json.*;
+source(&quot;\\java\\RecordIdTxn.java&quot;);//java文件放在bin目录下，可以使用相对路径，增加代码可移植性
+vars.put(&quot;resultPath&quot;,System.getProperty(&quot;user.dir&quot;)+&quot;\\result&quot;);//在bin目录下新建一个result目录，用于存放执行结果记录
+log.info(vars.get(&quot;resultPath&quot;));
+String response_data=prev.getResponseDataAsString();
+log.info(&quot;交易返回:&quot;+response_data);
+
+JSONObject data_obj = new JSONObject(response_data);
+String code = data_obj.get(&quot;respCode&quot;).toString();
+log.info(&quot;code:&quot;+code);
+if(code.equals(&quot;R200&quot;)){
+	log.info(&quot;交易成功&quot;);
+	//FileWriter fstream = new FileWriter(&quot;D:\\apache-jmeter-3.3\\bin\\result\\idtxn_R200.csv&quot;,true);
+	//BufferedWriter out = new BufferedWriter(fstream);
+	//out.write(vars.get(&quot;idTxn&quot;)+&quot;\n&quot;);
+	//out.close();
+	//fstream.close();
+	RecordIdTxn(vars.get(&quot;resultPath&quot;)+&quot;\\idtxn_R200.csv&quot;);//如果没有idtxn_R200.csv文件，会自动生成该文件
+	Failure = false;//设置成false 表示接口跑成功，在结果树中sample是绿色的 
+}else if(code.equals(&quot;R998&quot;)){
+	log.info(&quot;mcs system error...&quot;);
+	RecordIdTxn(vars.get(&quot;resultPath&quot;)+&quot;\\idtxn_R998.csv&quot;);
+	Failure = true;
+}else{
+	log.info(&quot;其他异常&quot;);
+	RecordIdTxn(vars.get(&quot;resultPath&quot;)+&quot;\\idtxn_other.csv&quot;);
+	Failure=true;
+}
+</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="false">
+            <stringProp name="IfController.condition">${__jexl3(&quot;${respCode}&quot;==&quot;R200&quot;,)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">FileWriter fstream = new FileWriter(&quot;D:\\apache-jmeter-3.3\\bin\\result\\idtxn_R200.csv&quot;,true);
+BufferedWriter out = new BufferedWriter(fstream);
+out.write(vars.get(&quot;idTxn&quot;)+&quot;\n&quot;);
+out.close();
+fstream.close();</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+              <stringProp name="TestPlan.comments">为了前置处理BeanShell PreProcessor能执行，如果除掉改sampler则BeanShell PreProcessor将不会执行</stringProp>
+              <stringProp name="BeanShellSampler.query"></stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="false">
+            <stringProp name="IfController.condition">${__jexl3(&quot;${respCode}&quot;==&quot;R997&quot;,)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">FileWriter fstream = new FileWriter(&quot;D:\\apache-jmeter-3.3\\bin\\result\\idtxn_R997.csv&quot;,true);
+BufferedWriter out = new BufferedWriter(fstream);
+out.write(vars.get(&quot;idTxn&quot;)+&quot;\n&quot;);
+out.close();
+fstream.close();</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+              <stringProp name="BeanShellSampler.query"></stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="false">
+            <stringProp name="IfController.condition">${__jexl3(&quot;${respCode}&quot;!=&quot;R200&quot; &amp;&amp;&quot;${respCode}&quot;!=&quot;R997&quot;,)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">FileWriter fstream = new FileWriter(&quot;D:\\apache-jmeter-3.3\\bin\\result\\idtxn_other.csv&quot;,true);
+BufferedWriter out = new BufferedWriter(fstream);
+out.write(vars.get(&quot;idTxn&quot;)+&quot;\n&quot;);
+out.close();
+fstream.close();</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+              <stringProp name="BeanShellSampler.query"></stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
