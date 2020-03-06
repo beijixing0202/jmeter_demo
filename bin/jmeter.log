@@ -1,133 +1,21 @@
-2020-03-03 10:07:05,499 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
-2020-03-03 10:07:05,562 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2020-03-03 10:07:05,572 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2020-03-03 10:07:05,616 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: Version 3.3 r1808647
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: java.version=1.8.0_131
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: os.name=Windows 7
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: os.arch=amd64
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: os.version=6.1
-2020-03-03 10:07:05,617 INFO o.a.j.JMeter: file.encoding=GBK
-2020-03-03 10:07:05,618 INFO o.a.j.JMeter: Max memory     =1888485376
-2020-03-03 10:07:05,618 INFO o.a.j.JMeter: Available Processors =4
-2020-03-03 10:07:05,658 INFO o.a.j.JMeter: Default Locale=中文 (中国)
-2020-03-03 10:07:05,659 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
-2020-03-03 10:07:05,659 INFO o.a.j.JMeter: JMeterHome=D:\apache-jmeter-3.3
-2020-03-03 10:07:05,659 INFO o.a.j.JMeter: user.dir  =D:\apache-jmeter-3.3\bin
-2020-03-03 10:07:05,660 INFO o.a.j.JMeter: PWD       =D:\apache-jmeter-3.3\bin
-2020-03-03 10:07:05,665 INFO o.a.j.JMeter: IP: 192.168.1.5 Name: NZRXEDHFHQNJYNH FullName: windows10.microdone.cn
-2020-03-03 10:07:05,666 INFO o.a.j.JMeter: plugin_dependency_paths=../dependencies/lib
-2020-03-03 10:07:05,666 INFO o.a.j.JMeter: Adding to loader: ../dependencies/lib
-2020-03-03 10:07:06,697 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform]
-2020-03-03 10:07:06,705 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2020-03-03 10:07:10,148 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2020-03-03 10:07:10,148 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2020-03-03 10:07:12,491 WARN o.j.r.PluginManager: Found JAR conflict: D:\apache-jmeter-3.3\lib\ext\bsh-2.0b5.jar and D:\apache-jmeter-3.3\lib\bsh-2.0b5.jar
-2020-03-03 10:07:12,493 WARN o.j.r.PluginManager: Found JAR conflict: D:\apache-jmeter-3.3\lib\ext\json.jar and D:\apache-jmeter-3.3\lib\ext\json-20180813.jar
-2020-03-03 10:07:12,493 WARN o.j.r.PluginManager: Found JAR conflict: D:\apache-jmeter-3.3\lib\ext\ojdbc6-11.2.0.3.jar and D:\apache-jmeter-3.3\lib\ojdbc6-11.2.0.3.jar
-2020-03-03 10:07:13,759 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-03-03 10:07:13,760 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-03-03 10:07:13,760 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-03-03 10:07:13,760 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-03-03 10:07:13,760 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2020-03-03 10:07:13,760 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2020-03-03 10:07:13,858 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=windows_7-5cb842824d145c68ca6cf5eaf4c58f3f-gui
-2020-03-03 10:07:14,112 WARN o.a.j.u.JMeterUtils: no icon for toolbar/19x19arrow-right-3.png
-2020-03-03 10:07:14,123 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2020-03-03 10:07:14,123 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2020-03-03 10:07:14,124 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2020-03-03 10:07:14,124 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2020-03-03 10:07:15,266 WARN o.a.j.g.u.MenuFactory: Configuration error, probably corrupt or missing third party library(jar) ? Could not create class: kg.apc.jmeter.reporters.LoadosophiaUploaderGui. java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
-java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
-	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:126) ~[jmeter-plugins-extras-1.2.1.jar:?]
-	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:32) ~[jmeter-plugins-extras-1.2.1.jar:?]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_131]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[?:1.8.0_131]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[?:1.8.0_131]
-	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[?:1.8.0_131]
-	at java.lang.Class.newInstance(Unknown Source) ~[?:1.8.0_131]
-	at org.apache.jmeter.gui.util.MenuFactory.initializeMenus(MenuFactory.java:505) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.gui.util.MenuFactory.<clinit>(MenuFactory.java:169) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.control.gui.TestPlanGui.createPopupMenu(TestPlanGui.java:93) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.gui.tree.JMeterTreeNode.createPopupMenu(JMeterTreeNode.java:156) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.gui.action.EditCommand.doAction(EditCommand.java:46) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:65) ~[ApacheJMeter_core.jar:3.3 r1808647]
-	at java.awt.event.InvocationEvent.dispatch(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventQueue.dispatchEventImpl(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventQueue.access$500(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventQueue$3.run(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventQueue$3.run(Unknown Source) [?:1.8.0_131]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_131]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventQueue.dispatchEvent(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:1.8.0_131]
-	at java.awt.EventDispatchThread.run(Unknown Source) [?:1.8.0_131]
-Caused by: java.lang.ClassNotFoundException: org.apache.commons.httpclient.methods.multipart.PartSource
-	at java.net.URLClassLoader.findClass(Unknown Source) ~[?:1.8.0_131]
-	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_131]
-	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_131]
-	... 28 more
-2020-03-03 10:07:16,436 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.assertions.BSFAssertion
-2020-03-03 10:07:18,036 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.extractor.BSFPostProcessor
-2020-03-03 10:07:18,118 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.modifiers.BSFPreProcessor
-2020-03-03 10:07:19,124 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2020-03-03 10:07:19,125 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\apache-jmeter-3.3\bin\proxyserver.jks
-2020-03-03 10:07:19,702 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.java.sampler.BSFSampler
-2020-03-03 10:07:19,788 INFO o.a.j.s.FileServer: Default base='D:\apache-jmeter-3.3\bin'
-2020-03-03 10:07:19,942 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement
-2020-03-03 10:07:19,942 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler
-2020-03-03 10:07:20,533 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.timers.BSFTimer
-2020-03-03 10:07:20,580 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.visualizers.BSFListener
-2020-03-03 10:07:26,747 INFO o.a.j.g.a.Load: Loading file: D:\apache-jmeter-3.3\bin\常用脚本.jmx
-2020-03-03 10:07:26,747 INFO o.a.j.s.FileServer: Set new base='D:\apache-jmeter-3.3\bin'
-2020-03-03 10:07:27,545 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2020-03-03 10:07:27,591 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2020-03-03 10:07:27,594 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
-2020-03-03 10:07:27,600 INFO o.a.j.s.SaveService: Loading file: D:\apache-jmeter-3.3\bin\常用脚本.jmx
-2020-03-03 10:07:28,071 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=1.2.1, jpgc-graphs-additional=1.2.1, jpgc-autostop=1.2.1, jpgc-sense=1.2.1, jpgc-cmd=1.2.1, jpgc-graphs-composite=1.2.1, jpgc-csl=1.2.1, jpgc-functions=1.2.1, jpgc-dbmon=1.2.1, jpgc-graphs-dist=1.2.1, jpgc-dummy=1.2.1, jpgc-ffw=1.2.1, jpgc-ggl=1.2.1, jpgc-httpraw=1.2.1, jpgc-sts=1.2.1, bzm-http2=1.4, jpgc-fifo=1.2.1, jpgc-jmxmon=1.2.1, jpgc-graphs-vs=1.2.1, jpgc-lockfile=1.2.1, jpgc-mergeresults=1.2.1, jpgc-pde=1.2.1, jpgc-prmctl=1.2.1, jpgc-perfmon=1.2.1, jpgc-plugins-manager=1.3, jpgc-synthesis=1.2.1, jpgc-plancheck=1.2.1, jpgc-tst=1.2.1, jpgc-udp=1.2.1, jpgc-csvars=1.2.1, jpgc-xml=1.2.1, jmeter-core=3.3, jmeter-ftp=3.3, jmeter-http=3.3, jmeter-jdbc=3.3, jmeter-jms=3.3, jmeter-junit=3.3, jmeter-java=3.3, jmeter-ldap=3.3, jmeter-mail=3.3, jmeter-mongodb=3.3, jmeter-native=3.3, jmeter-tcp=3.3, jmeter-components=3.3]
-2020-03-03 10:07:28,079 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-graphs-basic, jpgc-graphs-additional, jpgc-sense, jpgc-cmd, jpgc-graphs-composite, jpgc-functions, jpgc-graphs-dist, jpgc-ffw, jpgc-ggl, jpgc-sts, bzm-http2, jpgc-graphs-vs, jpgc-mergeresults, jpgc-perfmon, jpgc-synthesis, jpgc-plancheck, jpgc-tst]
-2020-03-03 10:07:28,655 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
-2020-03-03 10:07:32,062 INFO o.a.j.s.FileServer: Set new base='D:\apache-jmeter-3.3\bin'
-2020-03-03 10:11:00,917 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2020-03-03 10:11:00,918 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2020-03-03 10:11:00,918 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2020-03-03 10:11:00,986 INFO o.a.j.t.TestPlan: added D:\apache-jmeter-3.1\lib\ext\mysql-connector-java-5.1.28.jar to classpath
-2020-03-03 10:11:00,986 INFO o.a.j.t.TestPlan: added D:\apache-jmeter-3.1\lib\ext\ojdbc6-11.2.0.3.0.jar to classpath
-2020-03-03 10:11:01,116 ERROR o.a.j.p.j.c.DataSourceElement: JDBC data source already defined for: stldb_stage02
-2020-03-03 10:11:01,117 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2020-03-03 10:11:01,670 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : CNP交易
-2020-03-03 10:11:01,671 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group CNP交易.
-2020-03-03 10:11:01,671 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2020-03-03 10:11:01,671 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
-2020-03-03 10:11:01,675 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2020-03-03 10:11:01,676 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2020-03-03 10:11:01,678 INFO o.a.j.t.JMeterThread: Thread started: CNP交易 1-1
-2020-03-03 10:11:01,697 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = NZRXEDHFHQNJYNH
-2020-03-03 10:11:01,705 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2020-03-03 10:11:02,506 INFO o.a.j.t.JMeterThread: Thread is done: CNP交易 1-1
-2020-03-03 10:11:02,506 INFO o.a.j.t.JMeterThread: Thread finished: CNP交易 1-1
-2020-03-03 10:11:02,508 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2020-03-03 10:11:02,509 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
-2020-03-03 10:11:15,414 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2020-03-03 10:11:15,415 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2020-03-03 10:11:15,465 INFO o.a.j.t.TestPlan: added D:\apache-jmeter-3.1\lib\ext\mysql-connector-java-5.1.28.jar to classpath
-2020-03-03 10:11:15,466 INFO o.a.j.t.TestPlan: added D:\apache-jmeter-3.1\lib\ext\ojdbc6-11.2.0.3.0.jar to classpath
-2020-03-03 10:11:15,468 ERROR o.a.j.p.j.c.DataSourceElement: JDBC data source already defined for: stldb_stage02
-2020-03-03 10:11:15,476 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
-2020-03-03 10:11:16,009 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : CNP交易
-2020-03-03 10:11:16,010 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group CNP交易.
-2020-03-03 10:11:16,010 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2020-03-03 10:11:16,010 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
-2020-03-03 10:11:16,012 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2020-03-03 10:11:16,012 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2020-03-03 10:11:16,012 INFO o.a.j.t.JMeterThread: Thread started: CNP交易 1-1
-2020-03-03 10:11:17,079 INFO o.a.j.t.JMeterThread: Thread is done: CNP交易 1-1
-2020-03-03 10:11:17,079 INFO o.a.j.t.JMeterThread: Thread finished: CNP交易 1-1
-2020-03-03 10:11:17,082 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2020-03-03 10:11:17,082 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-03-06 09:33:51,208 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2020-03-06 09:33:51,254 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2020-03-06 09:33:51,286 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: Version 3.3 r1808647
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: java.version=1.8.0_131
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: os.name=Windows 7
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: os.arch=amd64
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: os.version=6.1
+2020-03-06 09:33:51,342 INFO o.a.j.JMeter: file.encoding=GBK
+2020-03-06 09:33:51,343 INFO o.a.j.JMeter: Max memory     =1888485376
+2020-03-06 09:33:51,343 INFO o.a.j.JMeter: Available Processors =4
+2020-03-06 09:33:51,401 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2020-03-06 09:33:51,402 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2020-03-06 09:33:51,402 INFO o.a.j.JMeter: JMeterHome=D:\apache-jmeter-3.3
+2020-03-06 09:33:51,402 INFO o.a.j.JMeter: user.dir  =D:\apache-jmeter-3.3\bin
+2020-03-06 09:33:51,403 INFO o.a.j.JMeter: PWD       =D:\apache-jmeter-3.3\bin
+2020-03-06 09:33:51,404 INFO o.a.j.JMeter: IP: 192.168.1.5 Name: NZRXEDHFHQNJYNH FullName: NZRXEDHFHQNJYNH
+2020-03-06 09:33:51,404 INFO o.a.j.JMeter: plugin_dependency_paths=../dependencies/lib
+2020-03-06 09:33:51,404 INFO o.a.j.JMeter: Adding to loader: ../dependencies/lib
